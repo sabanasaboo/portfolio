@@ -14,7 +14,7 @@ const Contactme = ({ id }) => {
             <div style={{flex: 1}}> 
               <Contactinfocard 
                 iconUrl={emailIcon}  
-                text={"sabana@gmail.com"}
+                text={"sabanabegam0211@gmail.com"}
               />
               <Contactinfocard 
                 iconUrl={gitIcon}    
