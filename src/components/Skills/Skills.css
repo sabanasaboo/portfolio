@@ -48,7 +48,9 @@
     flex:1;
     
 }
-
+.skills-info-c{
+    margin: auto;
+}
 
 @media (max-width: 768px) {
 
