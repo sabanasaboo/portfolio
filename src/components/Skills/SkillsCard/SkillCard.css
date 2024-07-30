@@ -89,3 +89,6 @@ transition: all 0.3sec ease;
         font-size: 0.9rem;
     }
 }
+@media (max-width:1025px){
+  .skills-card{padding:1.5rem;}
+}
