@@ -5,7 +5,7 @@ import laravel from '../../assets/images/laravel.png';
 
 import react from '../../assets/images/react-logo.png';
 import php from '../../assets/images/Php-logo.png';
-import js from '../../assets/images/javascript-logo.jpg';
+import js from '../../assets/images/javascript-logo.png';
 
 const Hero = () => {
   return (
