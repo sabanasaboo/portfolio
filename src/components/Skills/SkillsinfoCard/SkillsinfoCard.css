@@ -6,7 +6,11 @@
     background: rgba(22, 17, 47, 0.398);
     backdrop-filter: blur(1rem);
 }
-
+@media screen and (max-width:680px) {
+    .skills-info-card{
+        width: 80vw;
+    }
+}
 .skills-info-card h6 {
     font-size: 1.2rem;
     font-weight: 500;
