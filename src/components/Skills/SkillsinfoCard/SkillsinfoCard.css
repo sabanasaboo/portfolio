@@ -1,17 +1,12 @@
 .skills-info-card{
-<<<<<<< HEAD
-    width: 100%;
-    min-height: 23rem;
-=======
     width: 40vw;
-    /* min-height: 20vh; */
->>>>>>> 9da6c01e3e381e19e68c189d5fc8547744d8468a
+    /* min-height: 28rem; */
     border-radius: 0.65rem;
     border: 1.5px solid #6751b9;
     background: rgba(22, 17, 47, 0.398);
     backdrop-filter: blur(1rem);
-}
-@media screen and (max-width:680px) {
+} 
+@media screen and (max-width:750px) {
     .skills-info-card{
         width: 80vw;
     }
