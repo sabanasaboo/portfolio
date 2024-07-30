@@ -100,7 +100,7 @@ form {
 .form input,
 .form textarea {
     flex: 1;
-    width: 95%;
+    /* width: 95%; */
     font-size: 0.9rem;
     color: #fff;
     background: #130f2a;
