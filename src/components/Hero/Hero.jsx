@@ -9,7 +9,7 @@ import js from '../../assets/images/javascript-logo.png';
 
 const Hero = () => {
   return (
-    <section className="hero-container" id='home-p'>
+    <section className="hero-container" id='home'>
 <div className="hero-content">
     <h2>Where Creativity Meets Code</h2>
     <p>Passionate Full stack Developer |  Designing Exceptional Web Solutions with Passion</p>
