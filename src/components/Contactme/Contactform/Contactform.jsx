@@ -21,77 +21,69 @@
 // export default Contactform
 
 
-// ..............Jquery validation ............
-import React, { useEffect } from 'react';
-import './Contactform.css';
 
-const Contactform = () => {
-  useEffect(() => {
-    // Ensure jQuery is available
-    const $ = window.$;
-    const validator = $("form").validate({
-      rules: {
-        firstname: {
-          required: true,
-          minlength: 2
-        },
-        lastname: {
-          required: true,
-          minlength: 2
-        },
-        email: {
-          required: true,
-          email: true
-        },
-        message: {
-          required: true,
-          minlength: 10
-        }
-      },
-      messages: {
-        firstname: {
-          required: "Please enter your first name",
-          minlength: "Your first name must consist of at least 2 characters"
-        },
-        lastname: {
-          required: "Please enter your last name",
-          minlength: "Your last name must consist of at least 2 characters"
-        },
-        email: "Please enter a valid email address",
-        message: {
-          required: "Please enter a message",
-          minlength: "Your message must consist of at least 10 characters"
-        }
-      },
-      submitHandler: function(form) {
-        // Handle form submission
-        alert('Form submitted successfully!');
-        form.submit();
-      }
-    });
 
-    return () => {
-      // Cleanup validator when component unmounts
-      validator.destroy();
-    };
-  }, []);
+
+
+import React, { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
+import './Contactform.css'; // Ensure the CSS file exists and the path is correct
+
+const ContactForm = () => {
+  const [state, handleSubmit] = useForm("meojawqj");
+  const [submitted, setSubmitted] = useState(false);
+
+  // Update the state on successful submission
+  const onSubmit = (event) => {
+    handleSubmit(event);
+    if (state.succeeded) {
+      setSubmitted(true);
+    }
+  };
 
   return (
     <div className="contact-form-content">
-      <form className='form'>
+      <form className="form" onSubmit={onSubmit} noValidate>
         <div className="name-container">
-          <input type="text" name="firstname" placeholder='First Name' />
-          <input type="text" name="lastname" placeholder='Last Name' />
+          <input
+            type="text"
+            name="firstname"
+            placeholder="First Name"
+            required
+            minLength={2}
+          />
+          <input
+            type="text"
+            name="lastname"
+            placeholder="Last Name"
+            required
+            minLength={2}
+          />
         </div>
-        <input type="text" name="email" placeholder='Email' className='input-f' />
-        <textarea type="text" name="message" placeholder='Message' className='input-f' rows={3} />
-        <button type="submit">SEND</button>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          className="input-f"
+          required
+        />
+        <ValidationError prefix="Email" field="email" errors={state.errors} />
+        <textarea
+          name="message"
+          placeholder="Message"
+          className="input-f"
+          rows={3}
+          required
+          minLength={10}
+        />
+        <ValidationError prefix="Message" field="message" errors={state.errors} />
+        <button type="submit" disabled={state.submitting}>SEND</button>
       </form>
+      {submitted && (
+        <p className="success-message">Form submitted successfully!</p>
+      )}
     </div>
   );
-}
+};
 
-export default Contactform;
-
-
-
+export default ContactForm;
