@@ -7,7 +7,7 @@ import gitIcon from '../../assets/images/git-icon.png'
 
 const Contactme = ({ id }) => {
   return (
-    <section className="contact-container" id='contact-p'>
+    <section className="contact-container" id='contact'>
         <h5>Contact Me</h5>
 
         <div className="contact-content">

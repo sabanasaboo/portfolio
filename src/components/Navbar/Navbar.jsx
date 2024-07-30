@@ -11,7 +11,22 @@ const Navbar = () => {
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
   };
-
+  const click = () => {
+    let hash = window.location.hash
+    let element = document.querySelector((hash))
+    if(element){
+      element.scrollIntoView({behavior: '', block: 'start' });
+    }
+  }
+  const contact = () => {
+    
+    let element = document.querySelector("#contact")
+    console.log(element)
+    if(element){
+      console.log(element)
+      element.scrollIntoView({behavior: 'smooth', block: 'start' });
+    }
+  }
   return (
     <>
     
@@ -21,18 +36,18 @@ const Navbar = () => {
           <img className="logo" src={logo} alt="logo" />
           <ul className="desktop-menu">
             <li>
-              <a className="menu-item" href="#home">Home</a>
+              <a className="menu-item" href="#home" onClick={click}>Home</a>
             </li>
             <li>
-              <a className="menu-item" href="#skills">Skills</a>
+              <a className="menu-item" href="#skills" onClick={click}>Skills</a>
             </li>
             <li>
-              <a className="menu-item" href="#work-experience">Work Experience</a>
+              <a className="menu-item" href="#work-experience" onClick={click}>Work Experience</a>
             </li>
             {/* <li>
               <a className="menu-item" href="#contact-me">Contact Me</a>
             </li> */}
-            <button className="contact-btn" onClick={() => {}}>Contact Me</button>
+            <button className="contact-btn" onClick={contact}>Contact Me</button>
           </ul>
          
           <button className="menu-btn" onClick={toggleMenu}>
