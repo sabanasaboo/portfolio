@@ -11,16 +11,26 @@ form {
 .name-container {
     display: flex;
     align-items: center;
- 
-    gap: 1.5rem
-    ;
-}
 
+    /* grid: gap 1.5rem; */
+    /* width: 100%; */
+    box-sizing: border-box;
+
+}
+.name-container *{
+    width: 50%;
+}
+@media screen and (max-width:451px) {
+    .name-container input{
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
 .form input,
 .form textarea {
 
     flex: 1;
-    width: 95%;
+    /* width: 95%; */
     font-size: 0.9rem;
     color: #fff;
     background:  #130f2a;
