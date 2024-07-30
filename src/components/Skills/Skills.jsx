@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import './Skills.css';
 import { SKILLS } from '../../utils/data';
 import SkillCard from './SkillsCard/SkillCard';
@@ -29,7 +29,7 @@ const Skills = () => {
 
           ))}
         </div>
-        <div className="skills-info">
+        <div className="skills-info-c">
           <SkillsinfoCard 
           heading={selectedSkill.title}
           skills={selectedSkill.skills}
