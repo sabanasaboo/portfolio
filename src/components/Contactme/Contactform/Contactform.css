@@ -1,4 +1,4 @@
-/* .contact-form-content {
+.contact-form-content {
     width: 100%;
 }
  
@@ -98,7 +98,7 @@ form {
 
 .input-field {
     flex: 1;
-    width: 95%;
+    /* width: 95%; */
     font-size: 0.9rem;
     color: #fff;
     background: #130f2a;

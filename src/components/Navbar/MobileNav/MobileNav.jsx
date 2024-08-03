@@ -3,6 +3,22 @@ import './MobileNav.css';
 import logo from '../../../assets/images/logo.png';
 
 const MobileNav = ({ isOpen, toggleMenu }) => {
+  const click = () => {
+    let hash = window.location.hash
+    let element = document.querySelector((hash))
+    if(element){
+      element.scrollIntoView({behavior: '', block: 'start' });
+    }
+  }
+  const contact = () => {
+    
+    let element = document.querySelector("#contact")
+    console.log(element)
+    if(element){
+      console.log(element)
+      element.scrollIntoView({behavior: 'smooth', block: 'start' });
+    }
+  }
   return (
     <>
       <div     
@@ -13,18 +29,18 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
           <img className="logo" src={logo} alt="logo" />
           <ul>
             <li>
-              <a className="menu-item">Home</a>
+              <a className="menu-item" href="#home" onClick={click}>Home</a>
             </li>
             <li>
-              <a className="menu-item">Skills</a>
+              <a className="menu-item" href="#skills" onClick={click}>Skills</a>
             </li>
             <li>
-              <a className="menu-item">Work Experience</a>
+              <a className="menu-item" href="#work-experience" onClick={click}>Work Experience</a>
             </li>
             {/* <li>
               <a className="menu-item">Contact Me</a>
             </li> */}
-            <button className="contact-btn" onClick={() => {}}>Contact Me</button>
+            <button className="contact-btn" onClick={contact}>Contact Me</button>
           </ul>
         </div>
       </div>
