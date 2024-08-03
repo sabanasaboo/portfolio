@@ -49,12 +49,15 @@ const ContactForm = () => {
             type="text"
             name="firstname"
             placeholder="First Name"
+            className='input-field'
             required
             minLength={2}
           />
           <input
             type="text"
             name="lastname"
+            className='input-field'
+
             placeholder="Last Name"
             required
             minLength={2}
@@ -64,14 +67,14 @@ const ContactForm = () => {
           type="email"
           name="email"
           placeholder="Email"
-          className="input-f"
+          className='input-field'
           required
         />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
         <textarea
           name="message"
           placeholder="Message"
-          className="input-f"
+          className='input-field'
           rows={3}
           required
           minLength={10}
