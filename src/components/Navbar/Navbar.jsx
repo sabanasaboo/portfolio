@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/my-logo1.png';
 import MobileNav from './MobileNav/MobileNav';
 import { RxHamburgerMenu } from 'react-icons/rx'; 
 import { FaTimes } from 'react-icons/fa';
